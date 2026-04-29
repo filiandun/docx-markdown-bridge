@@ -10,16 +10,21 @@
     "Other"
   ],
   "activationEvents": [
+    "onLanguage:markdown",
+
     "onCommand:docx.openAsMarkdown",
-    "onLanguage:markdown"
+    "onCommand:docx.convertTo"
   ],
   "main": "./dist/extension.js",
   "contributes": {
       "commands": [
         {
           "command": "docx.openAsMarkdown",
-          "title": "Open as Markdown",
-          "icon": "media/pandoc.svg"
+          "title": "Open as Markdown"
+        },
+        {
+          "command": "docx.convertTo",
+          "title": "Convert to.."
         }
       ],
       "menus": {
@@ -27,6 +32,11 @@
           {
             "command": "docx.openAsMarkdown",
             "when": "resourceExtname == .docx",
+            "group": "navigation"
+          },
+          {
+            "command": "docx.convertTo",
+            "when": "resourceExtname == .md",
             "group": "navigation"
           }
         ]

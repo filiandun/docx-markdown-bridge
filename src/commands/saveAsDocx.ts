@@ -1,22 +1,25 @@
 import * as vscode from 'vscode';
+import * as path from 'path';
 
 import { convertPandoc } from '../services/pandocService';
 
-export async function saveAsDocx(mdFilePath: string) {
-    console.log("saveAsDocx", mdFilePath);
-
+export async function saveAsDocx(uri: vscode.Uri) {
+    console.log("saveAsDocx", uri.fsPath);
+    
+    const mdFilePath = uri.fsPath;
+    
     if (!mdFilePath.endsWith('.docx.md')) {
         return;
     }
-
+    
+    const docxFilePath = mdFilePath.replace(/\.md$/, "");
+    
     try {
-        const docxFilePath = mdFilePath.replace(/\.md$/, "");
-        
         await convertPandoc(mdFilePath, docxFilePath);
 
-        vscode.window.showInformationMessage(`Markdown's file ${mdFilePath} successfully was saved as Docx's file ${docxFilePath}`);
+        vscode.window.showInformationMessage(`DMB: \'${path.basename(mdFilePath)}\' saved as \'${path.basename(docxFilePath)}\'`);
     }
     catch (err: any) {
-        vscode.window.showErrorMessage(`Error: ${err.message || err}`);
+        vscode.window.showErrorMessage(`DMB: Error: ${err.message || err}`);
     }
 }
