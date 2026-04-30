@@ -13,7 +13,8 @@
     "onLanguage:markdown",
 
     "onCommand:docx.openAsMarkdown",
-    "onCommand:docx.convertTo"
+    "onCommand:docx.convertTo",
+    "onCommand:docx.createDocx"
   ],
   "main": "./dist/extension.js",
   "contributes": {
@@ -25,6 +26,10 @@
         {
           "command": "docx.convertTo",
           "title": "Convert to.."
+        },
+        {
+          "command": "docx.createDocx",
+          "title": "New .docx.."
         }
       ],
       "menus": {
@@ -37,6 +42,11 @@
           {
             "command": "docx.convertTo",
             "when": "resourceExtname == .md",
+            "group": "navigation"
+          },
+          {
+            "command": "docx.createDocx",
+            "when": "explorerResourceIsFolder",
             "group": "navigation"
           }
         ]

@@ -2,12 +2,12 @@ import * as vscode from 'vscode';
 import * as path from 'path';
 
 import { convertPandoc } from '../services/pandocService';
-import { resolveUri } from '../utils/resolveUri';
+import { resolveFileUri } from '../utils/resolveUri';
 
 export async function openAsMarkdown(uri?: vscode.Uri) {
     console.log('openAsMarkDown');
     
-    const targetUri = await resolveUri(uri);
+    const targetUri = await resolveFileUri(uri);
     if (!targetUri) { return; }
     
     const docxFilePath = targetUri!.fsPath;
