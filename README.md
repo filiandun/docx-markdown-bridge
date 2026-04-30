@@ -1,5 +1,4 @@
-
-# Docx Markdown Bridge
+# Docx Markdown Editor
 
 Convert DOCX files to Markdown and edit them directly in VS Code.
 

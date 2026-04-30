@@ -1,6 +1,6 @@
 # Change Log
 
-All notable changes to the "document-markdown-bridge" extension will be documented in this file.
+All notable changes to the "docx-markdown-editor" extension will be documented in this file.
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 

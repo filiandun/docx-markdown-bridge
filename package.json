@@ -1,6 +1,6 @@
 {
-  "name": "document-markdown-bridge",
-  "displayName": "Document Markdown Bridge",
+  "name": "docx-markdown-editor",
+  "displayName": "Docx Markdown Editor",
   "description": "",
   "version": "0.0.1",
   "engines": {
