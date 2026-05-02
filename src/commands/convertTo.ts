@@ -2,7 +2,7 @@ import * as vscode from 'vscode';
 import * as path from 'path';
 
 import { convertPandoc } from '../services/pandocService';
-import { resolveFileUri } from "../utils/resolveUri"
+import { resolveFileUri } from "../utils/resolveUri";
 
 export async function convertTo(uri?: vscode.Uri) {
     console.log('convertFromMarkdown');

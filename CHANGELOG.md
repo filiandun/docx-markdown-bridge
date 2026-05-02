@@ -18,3 +18,9 @@ This project follows the general structure recommended by Keep a Changelog.
 ### Changed
 
 - Added Marketplace metadata, documentation cleanup, and safer file/path handling.
+
+## [0.0.2] - 2026-05-02
+
+### Changed
+
+- Update icon
