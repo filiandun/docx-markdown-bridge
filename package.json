@@ -1,8 +1,15 @@
 {
   "name": "docx-markdown-editor",
   "displayName": "Docx Markdown Editor",
-  "description": "",
+  "publisher": "filian",
+  "description": "Convert DOCX files to Markdown and sync edits back to DOCX in VS Code.",
   "version": "0.0.1",
+  "license": "MIT",
+  "icon": "media/pandoc.svg",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/filiandun/docx-markdown-bridge.git"
+  },
   "engines": {
     "vscode": "^1.116.0"
   },
@@ -41,7 +48,7 @@
           },
           {
             "command": "docx.convertTo",
-            "when": "resourceExtname == .md",
+            "when": "resourceExtname == .md || resourceExtname == .docx || resourceExtname == .html",
             "group": "navigation"
           },
           {

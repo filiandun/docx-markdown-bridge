@@ -9,6 +9,11 @@ export async function openAsMarkdown(uri?: vscode.Uri) {
     
     const targetUri = await resolveFileUri(uri);
     if (!targetUri) { return; }
+
+    if (!targetUri.fsPath.toLowerCase().endsWith('.docx')) {
+        vscode.window.showErrorMessage('DME: Open as Markdown only works with .docx files');
+        return;
+    }
     
     const docxFilePath = targetUri!.fsPath;
     const mdFilePath = docxFilePath + ".md";
@@ -20,9 +25,9 @@ export async function openAsMarkdown(uri?: vscode.Uri) {
 
         await vscode.commands.executeCommand('vscode.open', mdFileUri);
 
-        vscode.window.showInformationMessage(`DMB: \'${path.basename(docxFilePath)}\' open as \'${path.basename(mdFilePath)}\'`);
+        vscode.window.showInformationMessage(`DME: \'${path.basename(docxFilePath)}\' open as \'${path.basename(mdFilePath)}\'`);
     }
     catch (err: any) {
-        vscode.window.showErrorMessage(`DMB: Error: ${err.message || err}`);
+        vscode.window.showErrorMessage(`DME: Error: ${err.message || err}`);
     }
 }

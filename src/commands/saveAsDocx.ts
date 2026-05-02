@@ -17,9 +17,9 @@ export async function saveAsDocx(uri: vscode.Uri) {
     try {
         await convertPandoc(mdFilePath, docxFilePath);
 
-        vscode.window.showInformationMessage(`DMB: \'${path.basename(mdFilePath)}\' saved as \'${path.basename(docxFilePath)}\'`);
+        vscode.window.showInformationMessage(`DME: \'${path.basename(mdFilePath)}\' saved as \'${path.basename(docxFilePath)}\'`);
     }
     catch (err: any) {
-        vscode.window.showErrorMessage(`DMB: Error: ${err.message || err}`);
+        vscode.window.showErrorMessage(`DME: Error: ${err.message || err}`);
     }
 }
