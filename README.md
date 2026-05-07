@@ -2,6 +2,10 @@
 
 Edit DOCX content as Markdown directly in VS Code, then round-trip changes back to the original document with Pandoc.
 
+<p align="center">
+  <img src="./media/preview.gif" alt="Demo" width="900"/>
+</p>
+
 ## Features
 
 - Open `.docx` files as Markdown

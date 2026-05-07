@@ -3,7 +3,7 @@
   "displayName": "Docx Markdown Editor",
   "publisher": "filian",
   "description": "Convert DOCX files to Markdown and sync edits back to DOCX in VS Code.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "license": "MIT",
   "icon": "media/icon.png",
   "repository": {
